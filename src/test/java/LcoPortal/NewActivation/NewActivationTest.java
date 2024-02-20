@@ -13,14 +13,16 @@ import LcoPortal.ObjectRepository.HomePage;
 import LcoPortal.ObjectRepository.NewActivationPage;
 import LcoPortal.ObjectRepository.ReportsPage;
 import LcoPortal.ObjectRepository.TotalUnassignedSTBPage;
+import io.github.reactwebdriver.ByReact;
 
-@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
+//@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
 public class NewActivationTest extends BaseClass{
 
 	@Test
 	public void test() throws Throwable
 	{
-		driver.findElement(By.id("//span[text()='New Activation']")).click();
+		//span[text()='New Activation']
+		driver.findElement(By.xpath("//span[text()='New Activation']")).click();
 		NewActivationPage nap=new NewActivationPage(driver);
 		nap.getNewActivationEdt().sendKeys("1234567890");
 	}

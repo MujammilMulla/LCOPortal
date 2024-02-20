@@ -2,10 +2,12 @@ package LcoPortal.GenericUtilities;
 
 import java.sql.SQLException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -15,12 +17,15 @@ import org.testng.annotations.BeforeSuite;
 
 import LcoPortal.ObjectRepository.HomePage;
 import LcoPortal.ObjectRepository.LoginPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.reactwebdriver.ReactWebDriver;
 
 
 public class BaseClass extends WebDriverUtility{
 
 	PropertyFileUtility p=new PropertyFileUtility();
 	public WebDriver driver;
+	public ReactWebDriver reactWebDriver;
 	public static WebDriver sDriver;
 	@BeforeSuite
 	public void bSuite()
@@ -35,7 +40,7 @@ public class BaseClass extends WebDriverUtility{
 		if(BROWSER.contains("chrome"))
 		{
 			driver = new ChromeDriver();
-			
+			//reactWebDriver=new ReactWebDriver(driver, "#root");
 		}
 		if(BROWSER.contains("firefox"))
 		{
