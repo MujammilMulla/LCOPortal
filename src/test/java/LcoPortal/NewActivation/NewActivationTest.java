@@ -19,11 +19,19 @@ import io.github.reactwebdriver.ByReact;
 public class NewActivationTest extends BaseClass{
 
 	@Test
-	public void test() throws Throwable
+	public void newActivationTest() throws Throwable
 	{
-		//span[text()='New Activation']
-		driver.findElement(By.xpath("//span[text()='New Activation']")).click();
+		HomePage hp=new HomePage(driver);
+		hp.getNewActivation().click();
+		//driver.findElement(By.xpath("//span[text()='New Activation']")).click();
 		NewActivationPage nap=new NewActivationPage(driver);
-		nap.getNewActivationEdt().sendKeys("1234567890");
+		nap.getNewActivationEdt().sendKeys("abcd121234567890");
+		nap.getSubmitBtn().click();
+		
+		WebElement dropdown = driver.findElement(By.xpath("(//div[@class='select__input-container css-19bb58m'])[1]"));
+		dropdown.click();
+
+		WebElement option = driver.findElement(By.xpath("(//div[@class='select__input-container css-19bb58m'])[1]/div[id='react-select-2-input'][1]"));
+		option.click();
 	}
 }

@@ -13,7 +13,7 @@ public class HomePage {
 	@FindBy (xpath = "//span[text()='Logout']")
 	private WebElement logoutBtn;
 	
-	@FindBy (xpath = "//a[@class='d-flex align-items-center active']")
+	@FindBy (xpath = "//span[text()='New Activation']")
 	private WebElement newActivation;
 	
 	@FindBy (xpath = "//span[text()='Reports']")

@@ -6,7 +6,7 @@
       <class name="LcoPortal.NewActivation.NewActivationTest">
         <methods>
           <include name="bClass"/>
-          <include name="test"/>
+          <include name="newActivationTest"/>
           <include name="aMethod"/>
           <include name="bMethod"/>
           <include name="aClass"/>
