@@ -19,12 +19,21 @@ public class HomePage {
 	@FindBy (xpath = "//span[text()='Reports']")
 	private WebElement reports;
 
+	@FindBy (xpath = "//span[text()='Operations']")
+	private WebElement operations;
+	
 	public WebElement getUserImg() {
 		return userImg;
 	}
 
 	public WebElement getLogoutBtn() {
 		return logoutBtn;
+	}
+
+	
+	
+	public WebElement getOperations() {
+		return operations;
 	}
 
 	public HomePage(WebDriver driver) {
