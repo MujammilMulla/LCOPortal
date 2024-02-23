@@ -35,6 +35,7 @@ public class BaseClass extends WebDriverUtility{
 	@BeforeClass
 	public void bClass() throws Throwable
 	{
+		
 		String BROWSER=p.readDataFromPropertyFile("browser");
 		String URL=p.readDataFromPropertyFile("url");
 		if(BROWSER.contains("chrome"))
@@ -54,6 +55,7 @@ public class BaseClass extends WebDriverUtility{
 		sDriver=driver;
 		driver.manage().window().maximize();
 		waitForPageLoad(driver);
+		//ScreenRecorderUtil.startRecord("test");
 		driver.get(URL);
 		waitForPageLoad(driver);
 	}
@@ -68,10 +70,11 @@ public class BaseClass extends WebDriverUtility{
 		waitForPageLoad(driver);
 	}
 	@AfterMethod
-	public void aMethod()
+	public void aMethod() throws Exception
 	{
 		HomePage hp=new HomePage(driver);
 		//hp.logout();
+		//ScreenRecorderUtil.stopRecord();
 	}
 	@AfterClass
 	public void aClass()

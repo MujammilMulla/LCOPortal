@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-22T13:00:07 IST" name="Default suite" finished-at="2024-02-22T13:00:24 IST" duration-ms="16712">
+  <suite started-at="2024-02-23T18:44:05 IST" name="Default suite" finished-at="2024-02-23T18:44:19 IST" duration-ms="13872">
     <groups>
     </groups>
-    <test started-at="2024-02-22T13:00:07 IST" name="Default test" finished-at="2024-02-22T13:00:24 IST" duration-ms="16712">
+    <test started-at="2024-02-23T18:44:05 IST" name="Default test" finished-at="2024-02-23T18:44:19 IST" duration-ms="13872">
       <class name="LcoPortal.BulkPayment.BulkPaymentTest">
-        <test-method is-config="true" signature="bSuite()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@5890e879]" started-at="2024-02-22T13:00:07 IST" name="bSuite" finished-at="2024-02-22T13:00:07 IST" duration-ms="27" status="PASS">
+        <test-method is-config="true" signature="bSuite()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@24569dba]" started-at="2024-02-23T18:44:05 IST" name="bSuite" finished-at="2024-02-23T18:44:05 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bSuite -->
-        <test-method is-config="true" signature="bClass()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@5890e879]" started-at="2024-02-22T13:00:07 IST" name="bClass" finished-at="2024-02-22T13:00:14 IST" duration-ms="6741" status="PASS">
+        <test-method is-config="true" signature="bClass()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@24569dba]" started-at="2024-02-23T18:44:05 IST" name="bClass" finished-at="2024-02-23T18:44:13 IST" duration-ms="7859" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bClass -->
-        <test-method is-config="true" signature="bMethod()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@5890e879]" started-at="2024-02-22T13:00:14 IST" name="bMethod" finished-at="2024-02-22T13:00:16 IST" duration-ms="1509" status="PASS">
+        <test-method is-config="true" signature="bMethod()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@24569dba]" started-at="2024-02-23T18:44:13 IST" name="bMethod" finished-at="2024-02-23T18:44:14 IST" duration-ms="1259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bMethod -->
-        <test-method signature="test()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@5890e879]" started-at="2024-02-22T13:00:16 IST" name="test" finished-at="2024-02-22T13:00:24 IST" duration-ms="8332" status="PASS">
+        <test-method signature="test()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@24569dba]" started-at="2024-02-23T18:44:14 IST" name="test" finished-at="2024-02-23T18:44:19 IST" duration-ms="4699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="aMethod()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@5890e879]" started-at="2024-02-22T13:00:24 IST" name="aMethod" finished-at="2024-02-22T13:00:24 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="aMethod()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@24569dba]" started-at="2024-02-23T18:44:19 IST" name="aMethod" finished-at="2024-02-23T18:44:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aMethod -->
-        <test-method is-config="true" signature="aClass()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@5890e879]" started-at="2024-02-22T13:00:24 IST" name="aClass" finished-at="2024-02-22T13:00:24 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="aClass()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@24569dba]" started-at="2024-02-23T18:44:19 IST" name="aClass" finished-at="2024-02-23T18:44:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aClass -->
-        <test-method is-config="true" signature="aSuite()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@5890e879]" started-at="2024-02-22T13:00:24 IST" name="aSuite" finished-at="2024-02-22T13:00:24 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="aSuite()[pri:0, instance:LcoPortal.BulkPayment.BulkPaymentTest@24569dba]" started-at="2024-02-23T18:44:19 IST" name="aSuite" finished-at="2024-02-23T18:44:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aSuite -->
