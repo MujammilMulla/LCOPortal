@@ -30,8 +30,6 @@ public class HomePage {
 		return logoutBtn;
 	}
 
-	
-	
 	public WebElement getOperations() {
 		return operations;
 	}

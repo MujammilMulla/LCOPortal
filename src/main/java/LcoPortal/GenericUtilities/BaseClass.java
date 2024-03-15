@@ -14,16 +14,19 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+
+import com.aventstack.extentreports.Status;
 
 import LcoPortal.ObjectRepository.HomePage;
 import LcoPortal.ObjectRepository.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.reactwebdriver.ReactWebDriver;
 
-
 public class BaseClass extends WebDriverUtility{
 
 	PropertyFileUtility p=new PropertyFileUtility();
+	
 	public WebDriver driver;
 	public ReactWebDriver reactWebDriver;
 	public static WebDriver sDriver;
@@ -41,6 +44,7 @@ public class BaseClass extends WebDriverUtility{
 		if(BROWSER.contains("chrome"))
 		{
 			driver = new ChromeDriver();
+			
 			//reactWebDriver=new ReactWebDriver(driver, "#root");
 		}
 		if(BROWSER.contains("firefox"))
