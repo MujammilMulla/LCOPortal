@@ -12,7 +12,7 @@ import LcoPortal.ObjectRepository.BulkPaymentPage;
 import LcoPortal.ObjectRepository.HomePage;
 import LcoPortal.ObjectRepository.OperationsPage;
 
-@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
+//@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
 public class BulkPaymentTest extends BaseClass{
 
 	@Test 
