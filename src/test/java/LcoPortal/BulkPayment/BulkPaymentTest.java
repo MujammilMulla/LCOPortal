@@ -15,7 +15,7 @@ import LcoPortal.ObjectRepository.OperationsPage;
 //@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
 public class BulkPaymentTest extends BaseClass{
 
-	@Test 
+	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
 	public void bulkPaymentDemoTest() throws Throwable
 	{
 		//Assert.fail();

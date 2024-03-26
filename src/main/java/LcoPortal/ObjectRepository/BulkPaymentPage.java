@@ -34,6 +34,14 @@ public class BulkPaymentPage extends WebDriverUtility{
 	@FindBy (xpath = "//input[@name='filterDataTable']")
 	private WebElement searchEdt;
 	
+	@FindBy (xpath = "(//div[@class='select__input-container css-19bb58m'])[3]")
+	private WebElement customersDropdown;
+	
+	public WebElement getCustomersDropdown() {
+		return customersDropdown;
+	}
+
+
 	public WebElement getSubmitBtn() {
 		return submitBtn;
 	}
@@ -84,6 +92,6 @@ public class BulkPaymentPage extends WebDriverUtility{
 		
 		getSearchEdt().sendKeys(serialNumber);
 		getCheckbox().click();
-		getPaymentBtn().click();
+		//getPaymentBtn().click();
 	}
 }

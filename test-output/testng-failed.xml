@@ -6,8 +6,8 @@
       <class name="LcoPortal.BulkPayment.BulkPaymentTest">
         <methods>
           <include name="bClass"/>
-          <include name="aMethod"/>
           <include name="bulkPaymentDemoTest"/>
+          <include name="aMethod"/>
           <include name="bMethod"/>
           <include name="aClass"/>
           <include name="aSuite"/>
