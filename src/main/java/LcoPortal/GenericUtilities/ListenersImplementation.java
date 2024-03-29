@@ -16,7 +16,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;;
 
 public class ListenersImplementation implements ITestListener
 {
-	/*
+	
 	PropertyFileUtility pUtil=new PropertyFileUtility();
 	ExtentReports report;
 	ExtentTest test;
@@ -79,7 +79,7 @@ public class ListenersImplementation implements ITestListener
 		
 		String BROWSER = null;
 		try {
-			URL = pUtil.readDataFromPropertyFile("browser");
+			BROWSER = pUtil.readDataFromPropertyFile("browser");
 			
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
@@ -96,5 +96,5 @@ public class ListenersImplementation implements ITestListener
 		
 		report.flush();
 	}
-		*/
+		
 }

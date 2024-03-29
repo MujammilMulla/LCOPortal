@@ -10,6 +10,10 @@ public class HomePage {
 	@FindBy (xpath = "//img[@alt='avatarImg']")
 	private WebElement userImg;
 	
+	//span[text()='Dashboard']
+	@FindBy (xpath = "//span[text()='Dashboard']")
+	private WebElement dasboard;
+	
 	@FindBy (xpath = "//span[text()='Logout']")
 	private WebElement logoutBtn;
 	
@@ -44,6 +48,12 @@ public class HomePage {
 	
 	public WebElement getReports() {
 		return reports;
+	}
+
+	
+	
+	public WebElement getDasboard() {
+		return dasboard;
 	}
 
 	public void logout()

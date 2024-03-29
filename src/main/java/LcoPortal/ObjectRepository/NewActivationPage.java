@@ -43,7 +43,7 @@ public class NewActivationPage extends WebDriverUtility {
 	@FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]")
 	private WebElement groupTypeDropdown;
 	
-	@FindBy (xpath = "//div[@id='react-select-25-option-0']")
+	@FindBy (xpath = "//div[@id='react-select-3-listbox']")
 	private WebElement groupTypeDropdownValues;
 	
 	@FindBy (xpath = "(//div[@class='select__value-container css-hlgwow'])[3]")
@@ -130,10 +130,14 @@ public class NewActivationPage extends WebDriverUtility {
 		getNewActivationEdt().sendKeys("abcd121234567890");
 		getSubmitBtn().click();
 		waitForPageLoad(driver);
-		getCustomerTypeDropdown().click();
+		
+		
+		/*
 		customerTypeDropdownValues.click();
 		getGroupTypeDropdown().click();
 		waitForPageLoad(driver);
 		getGroupTypeDropdownValues().click();
+		*/
+		
 	}
 }

@@ -92,6 +92,6 @@ public class BulkPaymentPage extends WebDriverUtility{
 		
 		getSearchEdt().sendKeys(serialNumber);
 		getCheckbox().click();
-		//getPaymentBtn().click();
+		getPaymentBtn().click();
 	}
 }

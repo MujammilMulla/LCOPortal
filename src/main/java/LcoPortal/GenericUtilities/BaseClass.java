@@ -76,7 +76,8 @@ public class BaseClass extends WebDriverUtility{
 	@AfterMethod
 	public void aMethod() throws Exception
 	{
-		HomePage hp=new HomePage(driver);
+		//HomePage hp=new HomePage(driver);
+		
 		//hp.logout();
 		//ScreenRecorderUtil.stopRecord();
 	}
