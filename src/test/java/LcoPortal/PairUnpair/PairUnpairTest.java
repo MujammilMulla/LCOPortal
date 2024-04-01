@@ -51,7 +51,6 @@ public class PairUnpairTest extends BaseClass{
 		//assertEquals(actual, expected);
 	}
 	
-	
 	//Verify pairing of non existing serial number STB
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
 	public void pairTC33Test()
@@ -164,5 +163,157 @@ public class PairUnpairTest extends BaseClass{
 				String expected="Selected Serial Number not under this LCO";
 				
 				//assertEquals(actual, expected);
+			}
+			
+			
+			
+			//Verify unpairing of newly added paired boxes
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void unPair1Test()
+			{
+				String serialNumber="abcd121234567890";
+				
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.unpair(serialNumber);
+				
+				/* String actual=driver.findElement(By.xpath("//div[text()='Unpairing of STB is success']")).getText();
+				String expected="Unpairing of STB is success";
+				
+				assertEquals(actual, expected); */
+			}
+			
+			
+			//Verify unpairing of already unpaired boxes
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void unPair2Test()
+			{
+				String serialNumber="abcd121234567890";
+				
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.unpair(serialNumber);
+				/*
+				String actual=driver.findElement(By.xpath("//div[text()='"+serialNumber+" Operation cannot be done on Unpaired STB.']")).getText();
+				String expected=serialNumber+" Operation cannot be done on Unpaired STB.";
+				
+				assertEquals(actual, expected);  */
+			}
+			
+			//Verify Unpairing of non existing serial number STB
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void unPair3Test()
+			{
+				String serialNumber="abcd254234567890";
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.unpair(serialNumber);
+				/*
+				String actual=driver.findElement(By.xpath("//div[text()='Selected Serial Number not under this LCO']")).getText();
+				String expected="Selected Serial Number not under this LCO";
+				
+				assertEquals(actual, expected); */
+			}
+
+			//Verify Unpairing of existing serial number with another LCO
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void unPair4Test()
+			{
+				String serialNumber="abcd254234567890";
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.unpair(serialNumber);
+				/*
+				String actual=driver.findElement(By.xpath("//div[text()='Selected Serial Number not under this LCO']")).getText();
+				String expected="Selected Serial Number not under this LCO";
+				
+				assertEquals(actual, expected); */
+			}
+			
+			//Verify Unpairing without entering serial number
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void unPair5Test()
+			{
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.getUnpairBtn().click();
+				
+				String actual=driver.findElement(By.xpath("//div[text()='Serial number must be at least 10 characters']")).getText();
+				String expected="Serial number must be at least 10 characters";
+				
+				assertEquals(actual, expected); 
+			}
+			
+			//Verify pairing without entering VC number
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void pair1Test()
+			{
+				String serialNumber="abcd121234567890";
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.getSerialNumberEdt().sendKeys(serialNumber);
+				pp.getPairBtn().click();
+				
+				String actual=driver.findElement(By.xpath("//div[text()='VC number must be at least 10 characters']")).getText();
+				String expected="VC number must be at least 10 characters";
+				
+				assertEquals(actual, expected);
+			}
+			
+			//Verify pairing without entering serial number
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void pair2Test()
+			{
+				String vcNumber="abcd121234567890";
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.getVcNumberEdt().sendKeys(vcNumber);
+				pp.getPairBtn().click();
+				
+				String actual=driver.findElement(By.xpath("//div[text()='Serial number must be at least 10 characters']")).getText();
+				String expected="Serial number must be at least 10 characters";
+				
+				assertEquals(actual, expected);
+			}
+			
+			//Verify pairing without entering serial and VC number
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			public void pair3Test()
+			{
+				HomePage hp=new HomePage(driver);
+				hp.getOperations().click();
+				OperationsPage op=new OperationsPage(driver);
+				mouseHover(driver, op.getPairUnpair());
+				PairUnpairPage pp=new PairUnpairPage(driver);
+				pp.getPairBtn().click();
+				
+				String actual=driver.findElement(By.xpath("//div[text()='Serial number must be at least 10 characters']")).getText();
+				String expected="Serial number must be at least 10 characters";
+				assertEquals(actual, expected);
+				
+				String actual1=driver.findElement(By.xpath("//div[text()='VC number must be at least 10 characters']")).getText();
+				String expected1="VC number must be at least 10 characters";	
+				assertEquals(actual1, expected1);
 			}
 }
