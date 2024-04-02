@@ -14,7 +14,7 @@ import LcoPortal.ObjectRepository.PairUnpairPage;
 public class PairUnpairTest extends BaseClass{
 
 	//This script is to pair newly added boxes
-	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 1)
 	public void pairTC2162Test()
 	{
 		String serialNumber="abcd121234567890";
@@ -33,7 +33,7 @@ public class PairUnpairTest extends BaseClass{
 	}
 	
 	//Verify pairing of already paired STB
-	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 2)
 	public void pairTC3384Test()
 	{
 		String serialNumber="abcd121234567890";
@@ -52,7 +52,7 @@ public class PairUnpairTest extends BaseClass{
 	}
 	
 	//Verify pairing of non existing serial number STB
-	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 3)
 	public void pairTC33Test()
 	{
 		String serialNumber="abcd254234567890";
@@ -71,7 +71,7 @@ public class PairUnpairTest extends BaseClass{
 	}
 	
 	//Verify pairing of non existing vc number STB
-		@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+		@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 4)
 		public void pairTC3389Test()
 		{
 			String serialNumber="abcd121234567890";
@@ -90,7 +90,7 @@ public class PairUnpairTest extends BaseClass{
 		}
 	
 		//Verify pairing if serial number is with another LCO
-		@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+		@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 5)
 		public void pairTC3390Test()
 		{
 			String serialNumber="abcd254234567890";
@@ -109,7 +109,7 @@ public class PairUnpairTest extends BaseClass{
 		}
 		
 		//Verify pairing if VC number is with another LCO
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 6)
 			public void pairTC3391Test()
 			{
 				String serialNumber="abcd121234567890";
@@ -128,7 +128,7 @@ public class PairUnpairTest extends BaseClass{
 			}
 			
 			//Verify pairing if Serial and VC number is with another LCO
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 7)
 			public void pairTC3392Test()
 			{
 				String serialNumber="abcd254234567890";
@@ -147,7 +147,7 @@ public class PairUnpairTest extends BaseClass{
 			}
 			
 			//Verify pairing of non existing serial number and vc number
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 8)
 			public void pairTC3393Test()
 			{
 				String serialNumber="abcd254234567890";
@@ -168,8 +168,8 @@ public class PairUnpairTest extends BaseClass{
 			
 			
 			//Verify unpairing of newly added paired boxes
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void unPair1Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 9)
+			public void unPairTC3428Test()
 			{
 				String serialNumber="abcd121234567890";
 				
@@ -188,8 +188,8 @@ public class PairUnpairTest extends BaseClass{
 			
 			
 			//Verify unpairing of already unpaired boxes
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void unPair2Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 10)
+			public void unPairTC3429Test()
 			{
 				String serialNumber="abcd121234567890";
 				
@@ -207,8 +207,8 @@ public class PairUnpairTest extends BaseClass{
 			}
 			
 			//Verify Unpairing of non existing serial number STB
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void unPair3Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 11)
+			public void unPairTC3430Test()
 			{
 				String serialNumber="abcd254234567890";
 				HomePage hp=new HomePage(driver);
@@ -225,8 +225,8 @@ public class PairUnpairTest extends BaseClass{
 			}
 
 			//Verify Unpairing of existing serial number with another LCO
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void unPair4Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 12)
+			public void unPairTC3431Test()
 			{
 				String serialNumber="abcd254234567890";
 				HomePage hp=new HomePage(driver);
@@ -243,8 +243,8 @@ public class PairUnpairTest extends BaseClass{
 			}
 			
 			//Verify Unpairing without entering serial number
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void unPair5Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 13)
+			public void unPairTC3432Test()
 			{
 				HomePage hp=new HomePage(driver);
 				hp.getOperations().click();
@@ -260,8 +260,8 @@ public class PairUnpairTest extends BaseClass{
 			}
 			
 			//Verify pairing without entering VC number
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void pair1Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 14)
+			public void pairTC3433Test()
 			{
 				String serialNumber="abcd121234567890";
 				HomePage hp=new HomePage(driver);
@@ -279,8 +279,8 @@ public class PairUnpairTest extends BaseClass{
 			}
 			
 			//Verify pairing without entering serial number
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void pair2Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 15)
+			public void pairTC3434Test()
 			{
 				String vcNumber="abcd121234567890";
 				HomePage hp=new HomePage(driver);
@@ -298,8 +298,8 @@ public class PairUnpairTest extends BaseClass{
 			}
 			
 			//Verify pairing without entering serial and VC number
-			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-			public void pair3Test()
+			@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, priority = 16)
+			public void pairTC3435Test()
 			{
 				HomePage hp=new HomePage(driver);
 				hp.getOperations().click();
