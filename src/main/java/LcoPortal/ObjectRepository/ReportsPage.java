@@ -13,6 +13,9 @@ public class ReportsPage {
 	@FindBy (xpath = "//span[text()='Unpaid Bill Details']")
 	private WebElement unpaidBillDetails;
 	
+	@FindBy (xpath = "//span[text()='Invoice Summary']")
+	private WebElement invoiceSummary;
+	
 	public WebElement getTotalUnassignedSTBreport()
 	{
 		return totalUnassignedSTBreport;
@@ -20,6 +23,11 @@ public class ReportsPage {
 	
 	public WebElement getUnpaidBillDetails() {
 		return unpaidBillDetails;
+	}
+
+	
+	public WebElement getInvoiceSummary() {
+		return invoiceSummary;
 	}
 
 	public ReportsPage(WebDriver driver)
