@@ -5,6 +5,22 @@
     <classes>
       <class name="LcoPortal.BulkPayment.BulkPaymentTest"/>
       <class name="LcoPortal.NewActivation.NewActivationTest"/>
+      <class name="LcoPortal.PairUnpair.PairTC3384Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3389Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3390Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3391Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3392Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3393Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC33Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3433Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3434Test"/>
+      <class name="LcoPortal.PairUnpair.PairTC3435Test"/>
+      <class name="LcoPortal.PairUnpair.PairUnpairTest"/>
+      <class name="LcoPortal.PairUnpair.UnPairTC3428Test"/>
+      <class name="LcoPortal.PairUnpair.UnPairTC3429Test"/>
+      <class name="LcoPortal.PairUnpair.UnPairTC3430Test"/>
+      <class name="LcoPortal.PairUnpair.UnPairTC3431Test"/>
+      <class name="LcoPortal.PairUnpair.UnPairTC3432Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- DemoSuite -->

@@ -16,6 +16,7 @@ public class PairTC3389Test extends BaseClass{
 		@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, dependsOnMethods = "pairTC33Test")
 		public void pairTC3389Test()
 		{
+			
 			String serialNumber="abcd121234567890";
 			String vcNumber="abcd254234567890";
 			HomePage hp=new HomePage(driver);
@@ -29,5 +30,6 @@ public class PairTC3389Test extends BaseClass{
 			String expected=vcNumber+" VC Number does not exist";
 			
 			//assertEquals(actual, expected);
+			 
 		}
 }

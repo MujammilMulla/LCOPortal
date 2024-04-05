@@ -17,6 +17,7 @@ public class UnPairTC3432Test extends BaseClass{
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, dependsOnMethods = "unPairTC3431Test")
 	public void unPairTC3432Test()
 	{
+		
 		HomePage hp=new HomePage(driver);
 		hp.getOperations().click();
 		OperationsPage op=new OperationsPage(driver);
@@ -28,6 +29,7 @@ public class UnPairTC3432Test extends BaseClass{
 		String expected="Serial number must be at least 10 characters";
 		
 		assertEquals(actual, expected); 
+		
 	}
 	
 }

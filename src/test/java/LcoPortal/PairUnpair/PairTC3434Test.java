@@ -18,6 +18,7 @@ public class PairTC3434Test extends BaseClass{
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, dependsOnMethods = "pairTC3433Test")
 	public void pairTC3434Test()
 	{
+		
 		String vcNumber="abcd121234567890";
 		HomePage hp=new HomePage(driver);
 		hp.getOperations().click();
@@ -31,6 +32,7 @@ public class PairTC3434Test extends BaseClass{
 		String expected="Serial number must be at least 10 characters";
 		
 		assertEquals(actual, expected);
+		
 	}
 	
 }

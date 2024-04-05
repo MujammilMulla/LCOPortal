@@ -18,6 +18,7 @@ public class PairTC3435Test extends BaseClass{
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, dependsOnMethods = "pairTC3434Test")
 	public void pairTC3435Test()
 	{
+	
 		HomePage hp=new HomePage(driver);
 		hp.getOperations().click();
 		OperationsPage op=new OperationsPage(driver);
@@ -32,5 +33,6 @@ public class PairTC3435Test extends BaseClass{
 		String actual1=driver.findElement(By.xpath("//div[text()='VC number must be at least 10 characters']")).getText();
 		String expected1="VC number must be at least 10 characters";	
 		assertEquals(actual1, expected1);
+		
 	}
 }

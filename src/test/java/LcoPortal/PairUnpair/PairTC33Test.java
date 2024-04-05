@@ -15,6 +15,7 @@ public class PairTC33Test extends BaseClass
 		@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, dependsOnMethods = "pairTC3384Test")
 		public void pairTC33Test()
 		{
+			
 			String serialNumber="abcd254234567890";
 			String vcNumber="abcd121234567890";
 			HomePage hp=new HomePage(driver);
@@ -28,5 +29,6 @@ public class PairTC33Test extends BaseClass
 			String expected="Selected Serial Number not under this LCO";
 			
 			//assertEquals(actual, expected);
+			
 		}
 }

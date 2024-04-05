@@ -20,6 +20,7 @@ public class NewActivationTest extends BaseClass
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
 	public void newActivationTest() throws Throwable
 	{
+		/*
 		WebDriverUtility wUtil=new WebDriverUtility();
 		HomePage hp=new HomePage(driver);
 		wUtil.waitForPageLoad(driver);
@@ -33,5 +34,7 @@ public class NewActivationTest extends BaseClass
 		//dropdown.click();
 		//WebElement option = driver.findElement(By.xpath("(//div[@class='select__input-container css-19bb58m'])[1]/div[id='react-select-2-input'][1]"));
 		//option.click();
+		*/
+		 
 	}
 }

@@ -15,6 +15,7 @@ public class PairTC3384Test extends BaseClass{
 		@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class, dependsOnMethods = "pairTC2162Test")
 		public void pairTC3384Test()
 		{
+			
 			String serialNumber="abcd121234567890";
 			String vcNumber="abcd121234567890";
 			HomePage hp=new HomePage(driver);
@@ -28,6 +29,8 @@ public class PairTC3384Test extends BaseClass{
 			String expected=serialNumber+" Operation cannot be done on paired STB.";
 			
 			//assertEquals(actual, expected);
+			
+			 
 		}
 
 }

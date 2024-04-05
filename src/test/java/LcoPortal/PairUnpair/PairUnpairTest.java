@@ -19,6 +19,7 @@ public class PairUnpairTest extends BaseClass{
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
 	public void pairTC2162Test()
 	{
+		
 		String serialNumber="abcd121234567890";
 		String vcNumber="abcd121234567890";
 		HomePage hp=new HomePage(driver);
@@ -32,5 +33,6 @@ public class PairUnpairTest extends BaseClass{
 		String expected="Pairing of STB is success";
 		
 		//assertEquals(actual, expected);
+		
 	}
 }

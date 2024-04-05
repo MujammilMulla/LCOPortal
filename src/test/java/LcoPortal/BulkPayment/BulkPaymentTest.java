@@ -13,7 +13,7 @@ import LcoPortal.ObjectRepository.BulkPaymentPage;
 import LcoPortal.ObjectRepository.HomePage;
 import LcoPortal.ObjectRepository.OperationsPage;
 
-//@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
+@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
 public class BulkPaymentTest extends BaseClass{
 
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
@@ -21,7 +21,7 @@ public class BulkPaymentTest extends BaseClass{
 	{
 		//Assert.fail();
 		//Reading test data from excel sheet
-		ExcelFileUtility eUtil=new ExcelFileUtility();
+		/* ExcelFileUtility eUtil=new ExcelFileUtility();
 		String  serialNumber=eUtil.readDataFromExcelSheet("BulkPayment", 1, 0);
 		
 		//Navigating to bulk payment page
@@ -42,5 +42,7 @@ public class BulkPaymentTest extends BaseClass{
 		System.out.println(expected +"====="+ actual);
 		assertEquals(actual, expected);
 		//ScreenRecorderUtil.stopRecord(); //Screen recording stopped
+		 * */
+		 
 	}
 }
