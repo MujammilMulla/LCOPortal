@@ -3,18 +3,21 @@ package LcoPortal.Reports;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import LcoPortal.GenericUtilities.BaseClass;
+import LcoPortal.GenericUtilities.ScreenRecorderUtil;
 import LcoPortal.ObjectRepository.HomePage;
 import LcoPortal.ObjectRepository.InvoiceSummaryPage;
 import LcoPortal.ObjectRepository.ReportsPage;
-
+@Listeners(LcoPortal.GenericUtilities.ListenersImplementation.class)
 public class InvoiceSummaryTest extends BaseClass{
 	
 	@Test (retryAnalyzer = LcoPortal.GenericUtilities.RetryAnalyserImplementation.class)
-	public void test()
+	public void test() throws Exception
 	{
+		ScreenRecorderUtil.startRecord("test");
 		HomePage hp=new HomePage(driver);
 		hp.getReports().click();
 		ReportsPage rp=new ReportsPage(driver);
@@ -22,6 +25,7 @@ public class InvoiceSummaryTest extends BaseClass{
 		waitForPageLoad(driver);
 		InvoiceSummaryPage isp=new InvoiceSummaryPage(driver);
 		isp.getSubmitBtn().click();
+		
 		
 		String actual1=driver.findElement(By.xpath("//div[text()='S.No']")).getText();
 		String expected1="S.No";
@@ -54,6 +58,8 @@ public class InvoiceSummaryTest extends BaseClass{
 		String actual8=driver.findElement(By.xpath("//div[text()='Packages']")).getText();
 		String expected8="Packages";
 		assertEquals(actual8, expected8);
+		
+		ScreenRecorderUtil.stopRecord();
 		
 	}
 }

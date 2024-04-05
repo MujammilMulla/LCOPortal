@@ -13,8 +13,15 @@ public class ReportsPage {
 	@FindBy (xpath = "//span[text()='Unpaid Bill Details']")
 	private WebElement unpaidBillDetails;
 	
+	public WebElement getTotalCustomerReport() {
+		return totalCustomerReport;
+	}
+
 	@FindBy (xpath = "//span[text()='Invoice Summary']")
 	private WebElement invoiceSummary;
+	
+	@FindBy (xpath = "//span[text()='Total Customer']")
+	private WebElement totalCustomerReport;
 	
 	public WebElement getTotalUnassignedSTBreport()
 	{

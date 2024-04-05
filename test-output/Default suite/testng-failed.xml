@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="LcoPortal.Reports.TotalUnassignedSTBTest">
+      <class name="LcoPortal.Reports.TotalCustomerReport">
         <methods>
           <include name="bClass"/>
+          <include name="testTotalCustomerReport"/>
           <include name="aMethod"/>
           <include name="bMethod"/>
-          <include name="test"/>
           <include name="aClass"/>
           <include name="aSuite"/>
           <include name="bSuite"/>
         </methods>
-      </class> <!-- LcoPortal.Reports.TotalUnassignedSTBTest -->
+      </class> <!-- LcoPortal.Reports.TotalCustomerReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
